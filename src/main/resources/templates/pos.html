@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Purchase Orders</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<H2>Plants</H2>
+<table>
+    <tr>
+        <td><b>ID</b></td>
+        <td><b>Contact</b></td>
+        <td><b>Start Date</b></td>
+        <td><b>End Date</b></td>
+        <td><b>Status</b></td>
+        <td><b>Plant ID</b></td>
+        <td><b>Plant Name</b></td>
+    </tr>
+    <tr th:each="po :${pos}">
+        <td th:text="${po.id}"></td>
+        <td th:text="${po.contact}"></td>
+        <td th:text="${po.start}"></td>
+        <td th:text="${po.endr}"></td>
+        <td th:text="${po.purchaseOrderStatus}"></td>
+        <td th:text="${po.plant.id}"></td>
+        <td th:text="${po.plant.name}"></td>
+    </tr>
+</table>
+<b><p th:text="'Purchase Order with id ' + ${id} + ' is '+ ${availability}"/></b>
+</body>
+</html>
+
+<!--<div class="row">-->
+
+<!--</div>-->

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>RentIt home page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Welcome to RentIt</h1>
+<a href="createPlant.html">Create Plant</a><br>
+<a href="/plants">List all plants</a><br>
+Check a specific plant by id: <form method="get", action="/plant"><input type="text" name="id"> <button type="submit">submit</button></form><br>
+Check a specific plant availability at given range by id:<br>
+<form method="get", action="/plant/availableAtDate">
+    id:<input type="text" name="id"><br>
+    start:<input type="date" name="start"><br>
+    end:<input type="date" name="end">
+    <button type="submit">submit</button>
+</form><br><br><br>
+<a href="/pos">List all purchase orders</a><br>
+Check a specific purchase order by id:
+<form method="get", action="/po"><input type="text" name="id"> <button type="submit">submit</button></form><br>
+
+</body>
+</html>

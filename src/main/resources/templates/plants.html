@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>All Plants</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<H2>Plants</H2>
+    <table>
+        <tr>
+            <td><b>ID</b></td>
+            <td><b>Name</b></td>
+            <td><b>Description</b></td>
+            <td><b>Price</b></td>
+        </tr>
+        <tr th:each="plant :${plants}">
+            <td th:text="${plant.id}"></td>
+            <td th:text="${plant.name}"></td>
+            <td th:text="${plant.description}"></td>
+            <td th:text="${plant.price}"></td>
+        </tr>
+    </table>
+        <p th:text="'Plant with id ' + ${id} +' and name ' + ${name} +' is '+ ${availability}"/>
+</body>
+</html>
+
+<!--<div class="row">-->
+
+<!--</div>-->
