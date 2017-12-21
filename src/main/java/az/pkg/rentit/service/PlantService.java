@@ -40,6 +40,9 @@ public class PlantService {
     public boolean checkPlantAvailability(Plant plant, @RequestParam String start, @RequestParam String end){
         boolean available = true;
         plant = find(plant.getId());
+        if (plant.getPos() == null){
+            return true;
+        }
         for (int i = 0; i< plant.getPos().size(); i++ ){
             Date str = plant.getPos().get(i).getStart();
             Date en = plant.getPos().get(i).getEndr();

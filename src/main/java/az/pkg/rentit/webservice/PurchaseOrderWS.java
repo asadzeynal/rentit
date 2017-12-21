@@ -16,13 +16,14 @@ public class PurchaseOrderWS {
 
     @WebMethod
     public boolean createPurchaseOrder(PurchaseOrder order){
-        service.create(order);
+            service.create(order);
         return true;
     }
 
     @WebMethod
     public PurchaseOrder getPurchaseOrderByID(long id){
         PurchaseOrder po = service.find(id);
+//        System.out.println(po.getContact() + "cfhj");
         po.getPlant().setPos(null);
         return po;
     }
