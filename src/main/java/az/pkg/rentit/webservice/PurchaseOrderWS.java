@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
+import java.util.List;
 
 @WebService
 @Service
@@ -32,6 +33,11 @@ public class PurchaseOrderWS {
     public boolean cancelPurchaseOrderById(long id){
         service.cancelPurchaseOrder(id);
         return true;
+    }
+
+    @WebMethod
+    public List<PurchaseOrder> getAllPurchaseOrders(){
+        return (List<PurchaseOrder>) service.findAll();
     }
 
 }
